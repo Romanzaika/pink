@@ -26,3 +26,16 @@
     margin: 0 0 54px 0;
   }
 }
+
+@media ($desktop-widths-fullhd) {
+    .gallery {
+      justify-content: flex-start;
+    }
+
+    .gallery__item--normal {
+      margin: 0 40px 54px 0;
+        &:nth-of-type(5n) {
+          margin: 0 0 54px 0;
+        }
+    }
+}

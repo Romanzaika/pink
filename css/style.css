@@ -348,21 +348,19 @@ img {
 
 .download-app__store {
   display: block;
-  font-size: 0; }
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 57px; }
 
 .download-app__store--apple {
-  width: 47px;
-  height: 56px;
   background-image: url("../img/icons/icon-apple.svg"); }
 
 .download-app__store--android {
-  width: 43px;
-  height: 47px;
   background-image: url("../img/icons/icon-android.svg"); }
 
 .download-app__store--windows {
-  width: 44px;
-  height: 41px;
   background-image: url("../img/icons/icon-ms.svg"); }
 
 .download-app__descr {
@@ -733,10 +731,11 @@ img {
             transform: translateY(-50%);
     display: block;
     width: 20px;
-    height: 26px;
+    height: 27px;
     font-size: 0;
     background-image: url("../img/icons/icon-copyright.svg");
     background-repeat: no-repeat;
+    background-position: center;
     transition: 0.3s; }
     .page-footer__copyright a:hover {
       -webkit-filter: hue-rotate(-133deg) saturate(51.85%) brightness(32.9268%);
@@ -1310,6 +1309,15 @@ input[type="checkbox"]:checked + .form__checkbox-indicator::before {
     width: 100vw; }
   .snapshot--best .snapshot__img {
     z-index: 5; }
+  @media (min-width: 700px) and (min-width: 700px) {
+    .features__title {
+      min-width: 620px;
+      width: 88.57%;
+      margin: 0 auto; }
+    .contest__form {
+      min-width: 620px;
+      width: 88.57%;
+      margin: 0 auto; } }
   @media (min-width: 700px) {
   body {
     background-image: url("../img/bg-back-tablet@1x.jpg"); }
@@ -1703,45 +1711,15 @@ input[type="checkbox"]:checked + .form__checkbox-indicator::before {
       background-image: url("../img/iphone-hand-tablet@2x.png"); }
       .features__list::before {
         background-image: url("../img/iphone-screen-3-tablet@2x.png"); } }
-  @media (min-width: 700px) and (min-width: 700px) {
-    .features__title {
-      min-width: 620px;
-      width: 88.57%;
-      margin: 0 auto; }
-    .contest__form {
-      min-width: 620px;
-      width: 88.57%;
-      margin: 0 auto; } }
-  @media (min-width: 1200px) and (min-width: 700px) {
-    .news__list {
-      min-width: 620px;
-      width: 88.57%;
-      margin: 0 auto; } }
-  @media (max-width: 699px) and (min-width: 1200px) {
-    .contest__form-group {
-      min-width: 940px;
-      width: 78.33%;
-      margin: 0 auto; }
-      .contest__form-group h2 {
-        min-width: 940px;
-        width: 78.33%;
-        margin: 0 auto; }
-      .contest__form-group--app label {
-        min-width: 940px;
-        width: 78.33%;
-        margin: 0 auto; }
-      .contest__form-group--achievements label {
-        min-width: 940px;
-        width: 78.33%;
-        margin: 0 auto; }
-    .contest__form-btn {
-      min-width: 940px;
-      width: 78.33%;
-      margin: 0 auto; }
-    .contest__form-ref {
-      min-width: 940px;
-      width: 78.33%;
-      margin: 0 auto; } }
+  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    .download-app__wrapper {
+      background-image: url("../img/iphone-hand-desktop@2x.png"); }
+      .features__item:first-child::before {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png"); }
+      .features__item:nth-child(2)::before {
+        background-image: url("../img/iphone-screen-2-desktop@2x.png"); }
+      .features__item:last-child::before {
+        background-image: url("../img/iphone-screen-3-desktop@2x.png"); } }
   @media (min-width: 1200px) {
   body {
     font-size: 18px;
@@ -2150,6 +2128,8 @@ input[type="checkbox"]:checked + .form__checkbox-indicator::before {
       min-width: 940px;
       width: 78.33%;
       margin: 0 auto; }
+  .photos__gallery {
+    max-width: 1199px; }
   .photos__text {
     margin: 42px 10.835% 64px 10.835%; }
   .photos__posting-form {
@@ -2196,11 +2176,6 @@ input[type="checkbox"]:checked + .form__checkbox-indicator::before {
       margin-right: 0; }
   .snapshot--best::before {
     top: 54px; } }
-  @media (min-width: 1200px) and (min-width: 1200px) {
-    .news__list {
-      min-width: 940px;
-      width: 78.33%;
-      margin: 0 auto; } }
   @media (min-width: 700px) and (min-width: 1200px) {
     .features__title {
       min-width: 940px;
@@ -2210,15 +2185,51 @@ input[type="checkbox"]:checked + .form__checkbox-indicator::before {
       min-width: 940px;
       width: 78.33%;
       margin: 0 auto; } }
-  @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
-    .download-app__wrapper {
-      background-image: url("../img/iphone-hand-desktop@2x.png"); }
-      .features__item:first-child::before {
-        background-image: url("../img/iphone-screen-1-desktop@2x.png"); }
-      .features__item:nth-child(2)::before {
-        background-image: url("../img/iphone-screen-2-desktop@2x.png"); }
-      .features__item:last-child::before {
-        background-image: url("../img/iphone-screen-3-desktop@2x.png"); } }
+  @media (min-width: 1200px) and (min-width: 700px) {
+    .news__list {
+      min-width: 620px;
+      width: 88.57%;
+      margin: 0 auto; } }
+  @media (min-width: 1200px) and (min-width: 1200px) {
+    .news__list {
+      min-width: 940px;
+      width: 78.33%;
+      margin: 0 auto; } }
+  @media (max-width: 699px) and (min-width: 1200px) {
+    .contest__form-group {
+      min-width: 940px;
+      width: 78.33%;
+      margin: 0 auto; }
+      .contest__form-group h2 {
+        min-width: 940px;
+        width: 78.33%;
+        margin: 0 auto; }
+      .contest__form-group--app label {
+        min-width: 940px;
+        width: 78.33%;
+        margin: 0 auto; }
+      .contest__form-group--achievements label {
+        min-width: 940px;
+        width: 78.33%;
+        margin: 0 auto; }
+    .contest__form-btn {
+      min-width: 940px;
+      width: 78.33%;
+      margin: 0 auto; }
+    .contest__form-ref {
+      min-width: 940px;
+      width: 78.33%;
+      margin: 0 auto; } }
+  @media (min-width: 1686px) {
+  .photos__gallery {
+    max-width: 1320px; }
+  .gallery {
+    -webkit-box-pack: start;
+            justify-content: flex-start; }
+  .gallery__item--normal {
+    margin: 0 40px 54px 0; }
+    .gallery__item--normal:nth-of-type(5n) {
+      margin: 0 0 54px 0; } }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       .download-app::before {
         background-image: url("../img/iphone-hand-mobile@2x.png"); }

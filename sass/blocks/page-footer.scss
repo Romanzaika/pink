@@ -28,10 +28,11 @@
       transform: translateY(-50%);
       display: block;
       width: 20px;
-      height: 26px;
+      height: 27px;
       font-size: 0;
       background-image: url("../img/icons/icon-copyright.svg");
       background-repeat: no-repeat;
+      background-position: center;
       transition: 0.3s;
         &:hover {
           filter: hue-rotate(-133deg) saturate(51.85%) brightness(32.9268%);

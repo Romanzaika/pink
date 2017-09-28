@@ -29,10 +29,20 @@
 }
 
 @media ($desktop-widths) {
+  .photos__gallery {
+    max-width: 1199px;
+  }
+
   .photos__text {
     margin: 42px 10.835% 64px 10.835%;
   }
   .photos__posting-form {
     background-color: #fff;
+  }
+}
+
+@media ($desktop-widths-fullhd) {
+  .photos__gallery {
+    max-width: 1320px;
   }
 }

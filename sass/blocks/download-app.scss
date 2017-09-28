@@ -38,23 +38,21 @@
 .download-app__store {
   display: block;
   font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 57px;
 }
 
 .download-app__store--apple {
-  width: 47px;
-  height: 56px;
   background-image: url("../img/icons/icon-apple.svg");
 }
 
 .download-app__store--android {
-  width: 43px;
-  height: 47px;
   background-image: url("../img/icons/icon-android.svg");
 }
 
 .download-app__store--windows {
-  width: 44px;
-  height: 41px;
   background-image: url("../img/icons/icon-ms.svg");
 }
 
