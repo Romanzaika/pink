@@ -1,0 +1,252 @@
+.editor {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 55px 0 55px 0;
+}
+
+.editor__img {
+  display: block;
+  min-width: 300px;
+  width: 300px;
+  height: 400px;
+  flex-shrink: 0;
+}
+
+.editor__form {
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 3.125%;
+}
+
+.editor__filters {
+  width: 100%;
+  padding-left: 6.5%;
+}
+
+.editor__container--filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 6px 6.5% 6px 0;
+  border-bottom: 2px solid #dddfe0;
+    label {
+      font-size: 0;
+      width: 55px;
+      padding: 20px 0;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          transition: 0.3s;
+          filter: hue-rotate(-133deg) saturate(51.85%) brightness(32.9268%) opacity(0.3);
+        }
+        &:focus {
+            &::before {
+              filter: hue-rotate(0) saturate(1) brightness(1) opacity(1);
+            }
+        }
+    }
+    label[for="crop"] {
+        &::before {
+          width: 22px;
+          height: 22px;
+          background-image: url("../img/icons/icon-crop.svg");
+        }
+    }
+    label[for="fill"] {
+        &::before {
+          left: -1px;
+          width: 24px;
+          height: 22px;
+          background-image: url("../img/icons/icon-fill.svg");
+        }
+    }
+    label[for="contrast"] {
+        &::before {
+          left: 3px;
+          width: 16px;
+          height: 16px;
+          background-image: url("../img/icons/icon-contrast.svg");
+        }
+    }
+    input {
+      order: 1;
+    }
+    input:hover ~ label::before {
+      filter: hue-rotate(-133deg) saturate(51.85%) brightness(32.9268%);
+    }
+    input:focus ~ label::before {
+      filter: hue-rotate(0) saturate(1) brightness(1) opacity(1);
+    }
+}
+
+.editor__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 6.5%;
+  width: 100%;
+}
+
+.editor__btn {
+  color: #d22856;
+  border-color: #d22856;
+  margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: #fff;
+      background-color: #d22856;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+@media ($mobile-widths-only) {
+  .editor {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0 40px 0;
+  }
+
+  .editor__img {
+    min-width: 280px;
+    width: 280px;
+    height: 374px;
+  }
+
+  .editor__form {
+    flex-grow: 0;
+    width: 280px;
+    margin: 0;
+  }
+
+  .editor__filters {
+    margin-bottom: 32px;
+    border-bottom: 2px solid #dddfe0;
+    padding: 0 0 75px 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .editor__container--filter {
+    width: auto;
+    padding: 0;
+    border: none;
+      label {
+        width: 80px;
+          &::before {
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+          }
+      }
+      label[for="crop"] {
+          &::before {
+            width: 44px;
+            height: 44px;
+          }
+      }
+      label[for="fill"] {
+          &::before {
+            left: 50%;
+            width: 48px;
+            height: 43px;
+          }
+      }
+      label[for="contrast"] {
+          &::before {
+            left: 50%;
+            width: 32px;
+            height: 32px;
+          }
+      }
+      input[type="range"] {
+        width: 240px;
+        padding: 19px 0;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 15px;
+      }
+  }
+
+  .editor__filter {
+    visibility: hidden;
+  }
+
+  .editor__filter--visible {
+    visibility: visible;
+  }
+
+  .editor__control {
+    padding: 0;
+  }
+
+  .editor__btn {
+    margin-bottom: 15px;
+  }
+}
+
+@media ($desktop-widths) {
+  .editor {
+    padding: 55px 60px 55px 80px;
+  }
+
+  .editor__form {
+    margin: 0 0 0 9.55%;
+  }
+
+  .editor__filters {
+    padding-left: 0;
+  }
+
+  .editor__container--filter {
+    padding: 5px 6.5% 5px 0;
+      label {
+        width: 92px;
+      }
+      label[for="crop"] {
+          &::before {
+            width: 44px;
+            height: 44px;
+          }
+      }
+      label[for="fill"] {
+          &::before {
+            left: -2px;
+            width: 48px;
+            height: 43px;
+          }
+      }
+      label[for="contrast"] {
+          &::before {
+            left: 6px;
+            width: 32px;
+            height: 32px;
+          }
+      }
+  }
+
+  .editor__control {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .editor__btn {
+    min-width: 185px;
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 9.75%;
+      &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+  }
+}

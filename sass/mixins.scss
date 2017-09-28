@@ -1,0 +1,78 @@
+@mixin center {
+  min-width: 280px;
+  width: 87.5%;
+  margin: 0 auto;
+    @media ($tablet-widths) {
+      min-width: 620px;
+      width: 88.57%;
+      margin: 0 auto;
+    }
+    @media ($desktop-widths) {
+      min-width: 940px;
+      width: 78.33%;
+      margin: 0 auto;
+    }
+}
+
+@mixin reset-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+@mixin link {
+  text-decoration: transparent;
+  color: #d22856;
+  transition: 0.3s;
+    &:hover {
+      color: #283645;
+      text-decoration: underline;
+    }
+    &:active {
+      color: #ced0d2;
+    }
+}
+
+@mixin gradient($height) {
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: $height;
+      background: linear-gradient(to top left, #f2f2f2 50.2%, #fff 52.0%);
+    }
+}
+
+@mixin triangle-gradient($height, $color) {
+  position: relative;
+  z-index: 1;
+    &::before{
+      content: "";
+      position: absolute;
+    	bottom: -$height;
+    	display: block;
+    	width: 50%;
+    	height: $height;
+      left: 0;
+      background: linear-gradient(to bottom left, $color 49.6%, transparent 50.4%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+    	bottom: -$height;
+    	display: block;
+    	width: 50%;
+    	height: $height;
+      right: 0;
+      background: linear-gradient(to bottom right, $color 49.6%, transparent 50.4%);
+    }
+}

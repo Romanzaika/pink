@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__item {
+  margin: 0 auto 20px auto;
+}
+
+.gallery__editor {
+  background-color: #f2f2f2;
+}
+
+@media ($tablet-widths) {
+  .gallery__item--best {
+    margin-bottom: 50px;
+  }
+}
+
+@media ($desktop-widths) {
+  .gallery {
+    justify-content: space-between;
+  }
+
+  .gallery__item {
+    margin: 0 0 54px 0;
+  }
+}

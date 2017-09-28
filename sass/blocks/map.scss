@@ -1,0 +1,16 @@
+.map {
+  overflow: hidden;
+  height: 200px;
+}
+
+@media ($tablet-widths) {
+  .map {
+    height: 378px;
+  }
+}
+
+@media ($desktop-widths) {
+  .map {
+    height: 502px;
+  }
+}

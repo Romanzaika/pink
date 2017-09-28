@@ -1,0 +1,141 @@
+.snapshot {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.snapshot--normal {
+  width: 280px;
+}
+
+.snapshot__img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.snapshot__comment {
+  padding: 26px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  flex-grow: 1;
+    p {
+      width: 100%;
+      margin: 0;
+      padding: 3px 0 7px 0;
+    }
+}
+
+.snapshot__author {
+  font-weight: 700;
+  padding-right: 5px;
+}
+
+.snapshot__date {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.snapshot__like {
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #d22856;
+  width: 100%;
+  position: relative;
+  padding: 6px 0 6px 30px;
+  align-self: flex-end;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 14px;
+      height: 12px;
+      background-image: url("../img/icons/icon-heart.svg");
+    }
+}
+
+.snapshot--best {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+    &::before {
+      content: "Панорама дня";
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 140px;
+      height: 36px;
+      padding: 6px;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      background-color: #d22856;
+      z-index: 10;
+    }
+    picture {
+      width: 100vw;
+    }
+    .snapshot__img {
+      z-index: 5;
+    }
+}
+
+@media ($tablet-widths) {
+  .snapshot--normal {
+    width: 300px;
+  }
+
+  .snapshot__comment {
+    padding: 26px;
+      p {
+        margin: 0;
+        padding: 3px 0 7px 0;
+      }
+  }
+
+  .snapshot__like {
+    padding: 6px 30px 6px 0;
+      &::before {
+        left: auto;
+        right: 0;
+      }
+  }
+
+  .snapshot--best {
+      &::before {
+        top: 57px;
+      }
+      .snapshot__comment {
+        padding: 30px;
+          p {
+            order: 1;
+          }
+      }
+      .snapshot__like {
+        width: 150px;
+        margin-left: auto;
+      }
+  }
+}
+
+@media ($desktop-widths) {
+  .snapshot--best {
+      &::before {
+        top: 54px;
+      }
+  }
+}

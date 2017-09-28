@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PinkApp</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style-min.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <div class="main-nav__wrapper">
+          <div class="main-nav__logo">
+            <a href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img src="img/logo-pink-white-mobile.svg" alt="Pink App" width="75" height="22">
+              </picture>
+            </a>
+          </div>
+          <button class="main-nav__btn" type="button">Открыть меню</button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+          <li class="main-nav__item"><a href="contest.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="">PinkApp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="photos  inner-page">
+      <section class="inner-page__title">
+        <h1>Фотографии<br> пользователей</h1>
+      </section>
+
+      <section class="inner-page__descr">
+        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </section>
+
+      <section class="photos__content  inner-page__content">
+        <section class="photos__gallery  gallery">
+          <section class="gallery__item  gallery__item--best  snapshot  snapshot--best">
+            <picture>
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/panorama-tablet@1x.jpg 1x,
+                              img/photo/panorama-tablet@2x.jpg 2x">
+                <img class="snapshot__img"
+                     src="img/photo/panorama-mobile@1x.jpg"
+                     srcset="img/photo/panorama-mobile@2x.jpg 2x"
+                     alt="Photo"
+                     width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Анна</span>
+              <time class="snapshot__date" datetime="">(5 минут назад)</time>
+              <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+              <span class="snapshot__like">Нравится: 215</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-1-desktop@1x.jpg 1x,
+                              img/photo/photo-1-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-1-tablet@1x.jpg 1x,
+                              img/photo/photo-1-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-1-mobile@1x.jpg"
+                srcset="img/photo/photo-1-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Левон</span>
+              <time class="snapshot__date" datetime="">(5 часов назад)</time>
+              <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <span class="snapshot__like">Нравится: 365</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-2-desktop@1x.jpg 1x,
+                              img/photo/photo-2-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-2-tablet@1x.jpg 1x,
+                              img/photo/photo-2-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-2-mobile@1x.jpg"
+                srcset="img/photo/photo-2-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Антон</span>
+              <time class="snapshot__date" datetime="">(12 часов назад)</time>
+              <p>Соседи будут рады!</p>
+              <span class="snapshot__like">Нравится: 666</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-3-desktop@1x.jpg 1x,
+                              img/photo/photo-3-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-3-tablet@1x.jpg 1x,
+                              img/photo/photo-3-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-3-mobile@1x.jpg"
+                srcset="img/photo/photo-3-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Борис</span>
+              <time class="snapshot__date" datetime="">(20 часов назад)</time>
+              <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <span class="snapshot__like">Нравится: 206</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-4-desktop@1x.jpg 1x,
+                              img/photo/photo-4-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-4-tablet@1x.jpg 1x,
+                              img/photo/photo-4-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-4-mobile@1x.jpg"
+                srcset="img/photo/photo-4-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Сергей</span>
+              <time class="snapshot__date" datetime="">(25 часов назад)</time>
+              <p>Самая кубанская в мире!</p>
+              <span class="snapshot__like">Нравится: 4</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-5-desktop@1x.jpg 1x,
+                              img/photo/photo-5-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-5-tablet@1x.jpg 1x,
+                              img/photo/photo-5-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-5-mobile@1x.jpg"
+                srcset="img/photo/photo-5-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Максим</span>
+              <time class="snapshot__date" datetime="">(40 часов назад)</time>
+              <p>Где снег-то?</p>
+              <span class="snapshot__like">Нравится: 150</span>
+            </div>
+          </section>
+
+          <section class="gallery__item  snapshot  snapshot--normal">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-6-desktop@1x.jpg 1x,
+                              img/photo/photo-6-desktop@1x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-6-tablet@1x.jpg 1x,
+                              img/photo/photo-6-tablet@1x.jpg 2x">
+                <img class="snapshot__img"
+                src="img/photo/photo-6-mobile@1x.jpg"
+                srcset="img/photo/photo-6-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <div class="snapshot__comment">
+              <span class="snapshot__author">Надежда</span>
+              <time class="snapshot__date" datetime="">(45 часов назад)</time>
+              <p>Всем GM и взаимные лайки!</p>
+              <span class="snapshot__like">Нравится: 2560</span>
+            </div>
+          </section>
+        </section >
+
+        <p class="photos__text">Затмите их всех!<br>
+          Выкладывайте все, что накопилось в телефоне!</p>
+
+        <section class="photos__posting-form">
+          <section class="photos__editor  editor">
+            <picture>
+              <source media="(min-width: 1200px)"
+                      srcset="img/photo/photo-7-desktop@1x.jpg 1x,
+                              img/photo/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 700px)"
+                      srcset="img/photo/photo-7-tablet@1x.jpg 1x,
+                              img/photo/photo-7-tablet@2x.jpg 2x">
+                <img class="editor__img"
+                src="img/photo/photo-7-mobile@1x.jpg"
+                srcset="img/photo/photo-7-mobile@2x.jpg 2x"
+                alt="Photo"
+                width="100%">
+            </picture>
+            <form class="editor__form  form" action="index.html" method="post">
+              <section class="editor__filters  form__group  form__group--range">
+                <div class="editor__container  editor__container--filter">
+                  <input class="editor__filter  editor__filter--visible" id="crop" type="range" name="crop" value="85" autofocus>
+                  <label for="crop">Кадрирование</label>
+                </div>
+                <div class="editor__container  editor__container--filter">
+                  <input class="editor__filter" id="fill" type="range" name="fill" value="15">
+                  <label for="fill">Заливка</label>
+                </div>
+                <div class="editor__container  editor__container--filter">
+                  <input class="editor__filter" id="contrast" type="range" name="contrast" value="55">
+                  <label for="contrast">Контраст</label>
+                </div>
+              </section>
+              <section class="editor__control">
+                <button class="editor__btn  btn" type="submit" name="post">Запостить</button>
+                <button class="editor__btn  btn" type="reset" name="cancel">Отмена</button>
+              </section>
+            </form>
+          </section>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" alt="Pink App" width="147" height="40">
+        </picture>
+      </div>
+
+      <div class="social">
+        <a class="social__link  social__link--tw" href="">Вконтакте</a>
+        <a class="social__link  social__link--fb" href="">Фейсбуке</a>
+        <a class="social__link  social__link--yt" href="">Инстаграме</a>
+      </div>
+
+      <div class="page-footer__copyright">
+        <p>Разработано <a href="">Pink</a></p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

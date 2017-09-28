@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PinkApp</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style-min.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <div class="main-nav__wrapper">
+          <div class="main-nav__logo">
+            <a href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img src="img/logo-pink-white-mobile.svg" alt="Pink App" width="75" height="22">
+              </picture>
+            </a>
+          </div>
+          <button class="main-nav__btn" type="button">Открыть меню</button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a href="photos.html">Фотографии</a></li>
+          <li class="main-nav__item  main-nav__item--active"><a>Конкурс</a></li>
+          <li class="main-nav__item"><a href="">PinkApp</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contest  inner-page">
+      <section class="contest__title  inner-page__title">
+        <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
+      </section>
+
+      <section class="contest__descr  inner-page__descr">
+        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+      </section>
+
+      <section class="contest__content  inner-page__content">
+        <form class="contest__form  form" action="index.html" method="post">
+          <section class="contest__form-group  contest__form-group--full-name  form__group  form__group--full-name">
+            <div class="contest__container">
+              <label for="form__surname">Фамилия:</label>
+              <input id="form__surname" type="text" name="surname" placeholder="Укажите фамилию">
+            </div>
+            <div class="contest__container">
+              <label for="form__name">Имя:</label>
+              <input id="form__name" type="text" name="name" placeholder="Введите ваше имя">
+            </div>
+            <div class="contest__container">
+              <label for="form__patronymic">Отчество:</label>
+              <input id="form__patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
+            </div>
+          </section>
+
+          <section class="contest__form-group  contest__form-group--app  form__group  form__group--radio">
+            <h2>С каким приложением путешествовали?</h2>
+            <label><input type="radio" name="app" checked><span class="form__radio-indicator"></span>Pink для iOS</label>
+            <label><input type="radio" name="app"><span class="form__radio-indicator"></span>Pink на Android</label>
+            <label><input type="radio" name="app"><span class="form__radio-indicator"></span>Windows Phone</label>
+          </section>
+
+          <section class="contest__form-group  contest__form-group--contacts  form__group  form__group--contacts">
+            <h2>Контактная информация</h2>
+            <label for="form__tel">Номер телефона</label>
+            <div class="contest__container-input  contest__container-input--tel">
+              <input id="form__tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ-ХХ-ХХ">
+            </div>
+            <label for="form__email">Адрес почты</label>
+            <div class="contest__container-input  contest__container-input--email">
+              <input id="form__email" type="email" name="email" placeholder="Введите почту">
+            </div>
+          </section>
+
+          <section class="contest__form-group  contest__form-group--achievements  form__group  form__group--checkbox">
+            <h2>Ваши безбашенные достижения в путешествии</h2>
+            <label><input type="checkbox" name="achievements" checked><span class="form__checkbox-indicator"></span>Сделал селфи с акулой</label>
+            <label><input type="checkbox" name="achievements" checked><span class="form__checkbox-indicator"></span>Обгорел на пляже</label>
+            <label><input type="checkbox" name="achievements"><span class="form__checkbox-indicator"></span>Видел Чака Норриса</label>
+            <label><input type="checkbox" name="achievements"><span class="form__checkbox-indicator"></span>Накупил сувениров</label>
+            <label><input type="checkbox" name="achievements" checked><span class="form__checkbox-indicator"></span>Удержал башню</label>
+            <label><input type="checkbox" name="achievements"><span class="form__checkbox-indicator"></span>Разгромил отель</label>
+          </section>
+
+          <section class="contest__form-group  contest__form-group--emotions  form__group  form__group--textarea">
+            <h2>Опишите свои эмоции</h2>
+            <textarea name="emotions" rows="6" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </section>
+
+          <button class="contest__form-btn  btn-form" type="submit" name="send">Отправить форму</button>
+
+          <small class="contest__form-ref  form__ref"><span>*</span> — обязательные поля</small>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img src="img/logo-pink-blue-mobile.svg" alt="Pink App" width="147" height="40">
+        </picture>
+      </div>
+
+      <div class="social">
+        <a class="social__link  social__link--tw" href="">Вконтакте</a>
+        <a class="social__link  social__link--fb" href="">Фейсбуке</a>
+        <a class="social__link  social__link--yt" href="">Инстаграме</a>
+      </div>
+
+      <div class="page-footer__copyright">
+        <p>Разработано <a href="">Pink</a></p>
+      </div>
+    </footer>
+
+    <section class="modal-report  modal-report--fail">
+      <h2 class="modal-report__title">Что-то пошло не так!</h2>
+      <p class="modal-report__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <div class="modal-report__control">
+        <button class="modal-report__btn  btn-form" type="button" name="ok">Ок</button>
+      </div>
+    </section>
+
+    <section class="modal-report  modal-report--win">
+      <h2 class="modal-report__title">Ваша заявка отправлена</h2>
+      <p class="modal-report__message">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="modal-report__control  modal-report__control--bg-gray">
+        <button class="modal-report__btn  btn-form" type="button" name="ok">Закрыть окно</button>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

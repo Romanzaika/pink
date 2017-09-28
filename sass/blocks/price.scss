@@ -1,0 +1,228 @@
+.price {
+  background-color: #f2f2f2;
+}
+
+.price__list {
+  @include center;
+}
+
+.price__table {
+  border-collapse: collapse;
+  width: 100%;
+    th {
+      border: 2px solid #e5e5e5;
+      border-top: none;
+      border-bottom-color: #283645;
+      background-clip: padding-box;
+      padding: 8px 0;
+      background-color: #283645;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+      text-transform: uppercase;
+      min-width: 150px;
+       &:first-child {
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom-color: #e5e5e5;
+       }
+       &:nth-child(2) {
+        border-left-color: #283645;
+       }
+       &:last-child {
+         border-right-color: #283645;
+       }
+       b {
+         font-size: 16px;
+         font-weight: 700;
+       }
+    }
+    td {
+      border: 2px solid #e5e5e5;
+      border-top: none;
+      background-clip: padding-box;
+      background-color: #fff;
+      padding: 15px 15px;
+      min-width: 150px;
+    }
+}
+
+.price__hit {
+  position: relative;
+  overflow: hidden;
+    &::before {
+      content: "Хит";
+      position: absolute;
+      top: 4px;
+      left: -26px;
+      transform: rotate(-45deg);
+      display: block;
+      width: 85px;
+      height: 30px;
+      padding: 8px 0;
+      background-color: #d22856;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+    }
+}
+
+.price__option {
+  font-size: 0;
+  position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+      display: block;
+      width: 30px;
+      height: 20px;
+      border: 4px solid #3dc644;
+      border-top: none;
+      border-right: none;
+    }
+}
+
+.price__option.price__option--no {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(0) translateY(0) rotate(0);
+    display: block;
+    width: 4px;
+    height: 34px;
+    border: none;
+    background-color: red;
+  }
+  &::before {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  }
+  &::after {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  }
+}
+
+.price__toggles {
+  display: none;
+}
+
+@media ($mobile-widths-only) {
+  .price__list {
+    margin: 65px auto 35px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price__table {
+    width: 840px;
+    transition: 1s;
+      th {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 30px;
+        width: 280px;
+        padding: 14px 0 20px 0;
+         &:first-child {
+           display: none;
+         }
+         b {
+           font-size: 18px;
+           font-weight: 700;
+         }
+      }
+      td {
+        width: 280px;
+        padding: 20px 70px 20px 20px;
+          &:first-child {
+            display: none;
+          }
+      }
+  }
+
+  .price__option {
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+      &::before {
+        content: "";
+        position: absolute;
+        left: auto;
+        right: 20px;
+        transform: translateX(0) rotate(-45deg);
+      }
+  }
+
+  .price__toggles {
+    display: flex;
+    margin: 0 0 40px 0;
+  }
+
+  .price__option.price__option--no {
+    &::before,
+    &::after {
+      top: 50%;
+      left: auto;
+      right: 34px;
+      transform: translateX(0) translateY(0) rotate(0);
+    }
+    &::before {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+
+  #price-input-1:checked ~ .slider__list .price__table {
+    transform: translateX(280px)
+  }
+
+  #price-input-2:checked ~ .slider__list .price__table {
+    transform: translateX()
+  }
+
+  #price-input-3:checked ~ .slider__list .price__table {
+    transform: translateX(-280px)
+  }
+}
+
+@media ($tablet-widths) {
+  .price__list {
+    margin-top: 36px;
+    margin-bottom: 68px;
+  }
+}
+
+@media ($desktop-widths) {
+  .price__list {
+    margin-top: 67px;
+    margin-bottom: 95px;
+  }
+
+  .price__table {
+      th {
+        padding: 17px 0;
+        font-size: 24px;
+         b {
+           font-size: 18px;
+         }
+      }
+      td {
+        padding: 19px 30px;
+        min-width: 150px;
+      }
+  }
+
+  .price__option {
+      &::before {
+        top: 15px;
+      }
+  }
+}
